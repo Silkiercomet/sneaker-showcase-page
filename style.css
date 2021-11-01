@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
+:root{
+    --Orange: hsl(26, 100%, 55%);
+--Paleorange: hsl(25, 100%, 94%);
+
+/* ### Neutral */
+
+--Veryvarkblue: hsl(220, 13%, 13%);
+--Darkgrayishblue: hsl(219, 9%, 45%);
+--Grayishblue: hsl(220, 14%, 75%);
+--Lightgrayishblue: hsl(223, 64%, 98%);
+--White: hsl(0, 0%, 100%);
+/* (with 75% opacity for lightbox background) */
+--Black : hsla(0, 0%, 0%,75%);
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+/* header - navbar */
+.wrapper__header{
+    display: flex;
+    justify-content: space-between;
+    max-height: 70px;
+    padding: 0 1.5rem;
+    position: relative;
+}
+#icon__mobile{
+    position: relative;
+    z-index: 99;
+    transition: 600ms ease-in-out;
+}
+#hamburguer{
+    display: none;
+}
+#hamburguer:checked ~ nav.mobile{
+    left: 0;
+}
+#hamburguer:checked ~ label #icon__mobile{
+    content: url("images/icon-close.svg");
+}
+.nav__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.logo{
+    padding-left: 1rem;
+}
+
+.cart__profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border: 3px solid transparent;
+    transition: 300ms ease-in-out;
+    max-width: 33px;
+    max-height: 33px;
+    
+}
+.profile:hover{
+    border-color: var(--Orange);
+    border-radius: 50%;
+}
+.profile:nth-child(2) img{
+    max-width: 30px;
+    max-height: 45px;
+}
+nav.mobile{
+    height: 200vh;
+    background-color: var(--White);
+    width: 200px;
+    position: absolute;
+    left: -200px;
+    z-index: 95;
+    transition: 500ms ease-in-out;
+    
+}
+nav.mobile ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(12%);
+}
+nav.mobile ul li {
+    padding: .5rem 0;
+    padding-left: 1.5rem;
+}
+nav.mobile ul li a{
+    text-decoration: none;
+    color: var(--Veryvarkblue);
+    font-weight: 700;
+}
+/* header - navbar */
+
+/* hero */
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+/* hero */
