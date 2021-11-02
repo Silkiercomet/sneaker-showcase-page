@@ -25,6 +25,9 @@ body{
     font-family: 'Kumbh Sans', sans-serif;
 
 }
+.desktop{
+    display: none;
+}
 /* header - navbar */
 .wrapper__header{
     display: flex;
@@ -37,6 +40,10 @@ body{
     position: relative;
     z-index: 99;
     transition: 600ms ease-in-out;
+    background-image: url("images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 15px 12px;
 }
 #hamburguer{
     display: none;
@@ -44,8 +51,8 @@ body{
 #hamburguer:checked ~ nav.mobile{
     left: 0;
 }
-#hamburguer:checked ~ label #icon__mobile{
-    content: url("images/icon-close.svg");
+#hamburguer:checked ~ label#icon__mobile{
+    background-image: url("images/icon-close.svg");
 }
 .nav__menu{
     display: flex;
@@ -116,6 +123,162 @@ nav.mobile ul li a{
 .wrapper{
     display: flex;
     flex-direction: column;
+    margin-bottom: 4.5rem;
+}
+.hero .article img{
+    width: 100%;
+    
+}
+.hero .article {
+    position: relative;
+    z-index: 94;
+    max-height: 50%;
+}
+.btn__prev, .btn__next{
+    position: absolute;
+    max-height: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 99;
+    background-color: var(--White);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn__prev{
+    background-image: url(images/icon-previous.svg);
+    left: 1.1rem;
+    background-position:45% center;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: 28.25%;
+    padding: 1rem;
+}
+.btn__next{
+    background-image:url(images/icon-next.svg);
+    right: 1.1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: 30%;
+    padding: 1rem;
+}
+/* hero */
+
+/* product info */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1.5rem;
+}
+.info .brand a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--Orange);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
 }
 
-/* hero */
+.article__name{
+    color: var(--Veryvarkblue);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    padding: 0.5rem 0;
+    max-width: 22ch;
+}
+.details{
+    color: var(--Darkgrayishblue);
+}
+/* pricing */
+.pricing{
+    margin-top: 1.2rem;
+    padding: 0 1.5rem;
+}
+.price__discount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Veryvarkblue);
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+.discount__percent{
+    background-color: var(--Paleorange);
+    color: var(--Orange);
+    font-size: .8rem;
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    margin-left: .4rem;
+}
+.full__price{
+    font-weight: 700;
+    color: var(--Grayishblue);
+    text-decoration: line-through;
+}
+.input__amout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    padding:  .5rem ;
+    background-color: var(--Lightgrayishblue);
+    margin-top: 1.2rem;
+}
+.minus,.plus{
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.minus{
+    background-image: url(images/icon-minus.svg);
+    padding: 1rem;
+}
+.plus{
+    background-image: url(images/icon-plus.svg);
+    padding: 1rem;
+}
+.amoutOfItems{
+    font-weight: 700;
+    color: var(--Veryvarkblue);
+}
+.add__btn {
+    margin-top: 1.2rem;
+}
+.add__btn .btn{
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--Orange);
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+
+}
+.add__btn .btn svg{
+    margin-right: .8rem;
+    
+    
+}
+
+
+/* product info */
