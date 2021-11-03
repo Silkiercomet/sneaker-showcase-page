@@ -98,7 +98,7 @@ nav.mobile{
     width: 200px;
     position: absolute;
     left: -200px;
-    z-index: 95;
+    z-index: 96;
     transition: 500ms ease-in-out;
     
 }
@@ -290,6 +290,88 @@ nav.mobile ul li a{
 
 /* product info */
 
+
+/* floaters and modals */
+
+.cart__content{
+    display: none;
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: white;
+    width: 90%;
+    box-shadow:
+    0.4px 3.8px 2.2px rgba(0, 0, 0, 0.019),
+    0.9px 9px 5.3px rgba(0, 0, 0, 0.027),
+    1.8px 17px 10px rgba(0, 0, 0, 0.032),
+    3.1px 30.4px 17.9px rgba(0, 0, 0, 0.038),
+    5.8px 56.8px 33.4px rgba(0, 0, 0, 0.047),
+    14px 136px 80px rgba(0, 0, 0, 0.07)
+  ;
+    border-radius: 4px;
+    z-index: 95;
+}
+.cart__content .container {
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    
+}
+.cart__title{
+    padding: .6rem 0;
+    font-weight: 700;
+    border-bottom: 2px solid var(--Lightgrayishblue);
+}
+.cart__article{
+    padding: .7rem 0;
+}
+.article__details,.cart__article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#thumbnail{
+    width: 55px;
+    height: 55px;
+}
+.article__details{
+    flex-direction: column;
+    margin: 0 .8rem;
+    color: var(--Darkgrayishblue);
+}
+.name{
+    width: 100%;
+    font-size: .8rem;
+}
+.price__calcualtion{
+    width: 100%;
+}
+.price__calcualtion > *:not(:nth-child(3)){
+    padding-right: .2rem;
+}
+.total{
+    color: black;
+    font-weight: 700;
+}
+.btn__cheackout .btn{
+    width: 100%;
+    padding: 0.8rem 0;
+    border: 0;
+    border-radius: 7px;
+    background-color: var(--Orange);
+    font-weight: 700;
+    color: white;
+    
+}
+#cart__show{
+    display: none;
+}
+#cart__show:checked ~ .cart__content{
+    display: block;
+}
+
 /* Dektop Version */
 
 @media (min-width:700px){
@@ -436,7 +518,7 @@ nav.mobile ul li a{
         display: none;
         position: absolute;
         bottom: -280%;
-        left: -150px;
+        left: -170px;
         background-color: white;
         min-width: 280px;
         box-shadow:
