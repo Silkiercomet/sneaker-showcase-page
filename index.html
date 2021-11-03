@@ -34,7 +34,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <!-- <nav class="navbar desktop">
+       <nav class="navbar desktop">
         <ul>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -42,43 +42,78 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-      </nav> -->
+      </nav> 
 
     </menu>
 
     <aside class="cart__profile">
+      <input type="checkbox" name="cart" id="cart__show">
+      <label for="cart__show">
       <i class="cart">
         <img src="images/icon-cart.svg" alt="">
       </i>
+      </label>
       <i class="profile">
-        <img src="images/image-avatar.png" alt="">
+        <img src="images/image-avatar.png" alt="" class="avatar">
       </i>
+
+      <div class="cart__content ">
+        <div class="container">
+            <div class="cart__container">
+              <p class="cart__title">Cart</p>
+              <div class="cart__article">
+                <figure>
+                  <img src="images/image-product-1-thumbnail.jpg" alt="" id="thumbnail">
+                </figure>
+                <div class="article__details">
+                  <p class="name">Fall Limited Edition Sneakers</p>
+                  <div class="price__calcualtion">
+                    <span class="price__unit">$125.00</span><span class="cuantity">x3</span><span class="total">$375.00</span>
+                  </div>
+                </div>
+                <figure>
+                  <img src="images/icon-delete.svg" alt="">
+                </figure>
+            </div>
+            <div class="btn__cheackout">
+              <button class="btn">Cheackout</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </aside>
 
   </header>
 
   <main class="wrapper">
-
+    
     <section class="hero">
-      <figure class="article">
-        <img src="images/image-product-1.jpg" alt="">
-        <button class="btn__prev"></button>
-        <button class="btn__next"></button>
-      </figure>
-      <menu class="grid desktop">
-        <li>
-          <figure><img src="images/image-product-1-thumbnail.jpg" alt=""></figure>
-        </li>
-        <li>
-          <figure><img src="images/image-product-2-thumbnail.jpg" alt=""></figure>
-        </li>
-        <li>
-          <figure><img src="images/image-product-3-thumbnail.jpg" alt=""></figure>
-        </li>
-        <li>
-          <figure><img src="images/image-product-4-thumbnail.jpg" alt=""></figure>
-        </li>
-      </menu>
+      <div class="main__image">
+        <figure class="article">
+          <img src="images/image-product-1.jpg" alt="">
+          <button class="btn__prev mobile"></button>
+          <button class="btn__next mobile"></button>
+  
+        </figure>
+      </div>
+      <div class="images">
+        <menu class="grid desktop">
+          <li>
+            <figure><img src="images/image-product-1-thumbnail.jpg" alt=""></figure>
+          </li>
+          <li>
+            <figure><img src="images/image-product-2-thumbnail.jpg" alt=""></figure>
+          </li>
+          <li>
+            <figure><img src="images/image-product-3-thumbnail.jpg" alt=""></figure>
+          </li>
+          <li>
+            <figure><img src="images/image-product-4-thumbnail.jpg" alt=""></figure>
+          </li>
+        </menu>
+      </div>
     </section>
 
     <section class="info">
@@ -92,25 +127,28 @@
         These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
+      <section class="pricing">
+        <div class="price__discount">
+          <h2 class="price">$125.00<span class="discount__percent">50%</span></h2>
+          <span class="full__price">$250.00</span>
+        </div>
+  
+        <section class="amount__details">
+          <div class="input__amout">
+            <button class="minus"></button>
+            <p class="amoutOfItems">0</p>
+            <button class="plus"></button>
+          </div>
+          <div class="add__btn">
+            <button class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg> Add to cart
+            </button>
+          </div>
+        </section>
+      </section>
     </section>
 
-    <section class="pricing">
-      <div class="price__discount">
-        <h2 class="price">$125.00<span class="discount__percent">50%</span></h2>
-        <span class="full__price">$250.00</span>
-      </div>
 
-      <div class="input__amout">
-        <button class="minus"></button>
-        <p class="amoutOfItems">0</p>
-        <button class="plus"></button>
-      </div>
-      <div class="add__btn">
-        <button class="btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg> Add to cart
-        </button>
-      </div>
-    </section>
   </main>
 
   
